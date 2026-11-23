@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Darkstalkers - The Night Warriors",
+    "id": "SLES-00251",
+    "boot_exe": "SLES_002.51"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Darkstalkers - The Night Warriors (Europe).cue",
+    "bin_name": "Darkstalkers - The Night Warriors (Europe) (Track 1).bin",
+    "track_counts": [
+      46
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 49876512,
+      "md5": "2304038f8d9adf3790a30eb67695e428",
+      "sha1": "34f11eadfc7f3842be8fc2abea1b47d020d5f76c",
+      "crc32": "1ef48011"
+    },
+    "disc_fp": "583f0e3e3df1ad36ec03687980a066ba7548ba6c8c05b7faf9df787a779e1240"
+  },
+  "exe": {
+    "load_address": "0x80010004",
+    "entry_pc": "0x80086B04",
+    "text_size": "0x000A2800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 3387,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

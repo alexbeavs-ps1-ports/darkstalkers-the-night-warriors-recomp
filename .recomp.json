@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Darkstalkers - The Night Warriors",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "darkstalkers-the-night-warriors-recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "SLES-00251"
+  }
+}

@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Darkstalkers - The Night Warriors"
+id = "SLES-00251"
+players = 1
+exe = "disc/SLES_002.51"
+disc = "disc/Darkstalkers - The Night Warriors (Europe).cue"
+discs = ["disc/Darkstalkers - The Night Warriors (Europe).cue"]
+disc_serials = ["SLES-00251"]
+load_address = "0x80010004"
+entry_pc = "0x80086B04"
+text_size = "0x000A2800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Darkstalkers - The Night Warriors (Europe) (Track 1).bin"
+cue_name = "Darkstalkers - The Night Warriors (Europe).cue"
+boot_exe = "SLES_002.51"
+known_sizes = [49876512]
+known_md5 = [
+  "2304038f8d9adf3790a30eb67695e428",
+]
+known_sha1 = [
+  "34f11eadfc7f3842be8fc2abea1b47d020d5f76c",
+]
+known_crc32 = [
+  "1ef48011",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Darkstalkers - The Night Warriors Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 46
+required_disc_fp = "583f0e3e3df1ad36ec03687980a066ba7548ba6c8c05b7faf9df787a779e1240"
